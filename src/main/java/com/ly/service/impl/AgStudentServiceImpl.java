@@ -5,6 +5,7 @@ package com.ly.service.impl;
  */
 
 import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.ly.dao.AgStudentMapper;
 import com.ly.model.AgStudent;
 import com.ly.service.AgStudentService;
@@ -25,8 +26,14 @@ public class AgStudentServiceImpl implements AgStudentService {
     private AgStudentMapper agStudentMapper;
 
     @Override
-    public List<AgStudent> findList() {
+    public PageInfo<AgStudent> findPageList() {
         PageHelper.startPage(1, 10);
-        return agStudentMapper.selectAll();
+        List<AgStudent> studentList = agStudentMapper.selectAll();
+        return new PageInfo<>(studentList);
+    }
+
+    @Override
+    public void doAdd(AgStudent agStudent) {
+        agStudentMapper.insertSelective(agStudent);
     }
 }

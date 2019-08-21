@@ -1,5 +1,6 @@
 package com.ly.service;
 
+import com.github.pagehelper.PageInfo;
 import com.ly.model.AgStudent;
 
 import java.util.List;
@@ -9,5 +10,14 @@ import java.util.List;
  */
 public interface AgStudentService {
 
-    List<AgStudent> findList();
+    /**
+     * 查询分页集合
+     * @return
+     */
+    PageInfo<AgStudent> findPageList();
+
+    /**
+     * 新增用户
+     */
+    void doAdd(AgStudent agStudent);
 }

@@ -1,5 +1,7 @@
 package com.ly.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.*;
@@ -88,6 +90,7 @@ public class AgStudent implements Serializable {
     /**
      * 创建时间
      */
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     @Column(name = "CREATE_DT")
     private Date createDt;
 
@@ -647,4 +650,5 @@ public class AgStudent implements Serializable {
         sb.append("]");
         return sb.toString();
     }
+
 }
