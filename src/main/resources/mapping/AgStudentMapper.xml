@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ly.dao.AgStudentMapper">
+  <resultMap id="BaseResultMap" type="com.ly.model.AgStudent">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="STU_NAME" jdbcType="VARCHAR" property="stuName" />
+    <result column="STU_SEX" jdbcType="INTEGER" property="stuSex" />
+    <result column="STU_TYPE" jdbcType="INTEGER" property="stuType" />
+    <result column="STUDY_CITY" jdbcType="VARCHAR" property="studyCity" />
+    <result column="STUDY_SCHOOL" jdbcType="VARCHAR" property="studySchool" />
+    <result column="GRADUATE_DT" jdbcType="DATE" property="graduateDt" />
+    <result column="CONTACT_NAME" jdbcType="VARCHAR" property="contactName" />
+    <result column="CONTACT_TYPE" jdbcType="INTEGER" property="contactType" />
+    <result column="CONTACT_PHONE" jdbcType="VARCHAR" property="contactPhone" />
+    <result column="CONTACT_NAME2" jdbcType="VARCHAR" property="contactName2" />
+    <result column="CONTACT_TYPE2" jdbcType="INTEGER" property="contactType2" />
+    <result column="CONTACT_PHONE2" jdbcType="VARCHAR" property="contactPhone2" />
+    <result column="SOURCE" jdbcType="VARCHAR" property="source" />
+    <result column="CREATE_DT" jdbcType="TIMESTAMP" property="createDt" />
+    <result column="GROUP_ID" jdbcType="INTEGER" property="groupId" />
+    <result column="SYS_USER_ID" jdbcType="VARCHAR" property="sysUserId" />
+    <result column="LAST_VISIT_DT" jdbcType="TIMESTAMP" property="lastVisitDt" />
+    <result column="LAST_VISIT_RECORD_DT" jdbcType="TIMESTAMP" property="lastVisitRecordDt" />
+    <result column="STATUS" jdbcType="INTEGER" property="status" />
+    <result column="LATEST_INTENT" jdbcType="INTEGER" property="latestIntent" />
+    <result column="AGENCY_ID" jdbcType="VARCHAR" property="agencyId" />
+    <result column="REMARK" jdbcType="VARCHAR" property="remark" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    ID, STU_NAME, STU_SEX, STU_TYPE, STUDY_CITY, STUDY_SCHOOL, GRADUATE_DT, CONTACT_NAME, 
+    CONTACT_TYPE, CONTACT_PHONE, CONTACT_NAME2, CONTACT_TYPE2, CONTACT_PHONE2, SOURCE, 
+    CREATE_DT, GROUP_ID, SYS_USER_ID, LAST_VISIT_DT, LAST_VISIT_RECORD_DT, STATUS, LATEST_INTENT, 
+    AGENCY_ID, REMARK
+  </sql>
+</mapper>
