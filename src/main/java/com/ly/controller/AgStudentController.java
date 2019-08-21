@@ -25,6 +25,7 @@ public class AgStudentController {
 
     @GetMapping("/list")
     public List<AgStudent>  getList(){
+
         List<AgStudent> studentList = agStudentService.findList();
         return studentList;
     }
